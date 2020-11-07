@@ -71,8 +71,8 @@ function cards(state = cardsState, action) {
                 name: action.data.name,
                 cards: []
             });
-
             return [...state];
+
         case CARD_MOVE_TO_SOME_COLUMN_DND:
             const {source, destination} = action.data;
             const getList = (id) => state.find(item => item.id === id);
@@ -102,8 +102,8 @@ function cards(state = cardsState, action) {
                     item.cards = item.id === destination.droppableId ? secondArray : item.cards;
                 });
             }
-
             return [...state];
+
         case ADD_CARD:
             state.forEach(item => {
                     if (item.id === action.data.id) {

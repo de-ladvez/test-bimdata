@@ -94,7 +94,7 @@ const Colums = function ({addCard, cardMoveToSomeColumnDnd, addColumn, cards}) {
     return (
         <Container className={style.container}>
             <div className={style.addColumnRow}>
-                <TextField id="outlined-basic" label="Введите имя колонки" variant="outlined" onChange={e => setNameNewColumn(e.target.value)}/>
+                <TextField id="outlined-basic" label="Введите имя колонки" variant="outlined" value={nameNewColumn} onChange={e => setNameNewColumn(e.target.value)}/>
                 <Button variant="contained" color="primary" onClick={handlerAddColum}>
                     Создать новую колонку
                 </Button>
